@@ -72,14 +72,10 @@ module gf_mult_reg_top #(
   logic result_re;
   logic ctrl1_wd;
   logic ctrl1_we;
-  logic ctrl2_add_wd;
-  logic ctrl2_add_we;
-  logic ctrl2_mult_wd;
-  logic ctrl2_mult_we;
-  logic status_idle_qs;
-  logic status_idle_re;
-  logic status_pending_qs;
-  logic status_pending_re;
+  logic ctrl2_wd;
+  logic ctrl2_we;
+  logic status_qs;
+  logic status_re;
 
   // Register instances
   // R[op_a]: V(False)
@@ -168,65 +164,33 @@ module gf_mult_reg_top #(
 
   // R[ctrl2]: V(True)
 
-  //   F[add]: 0:0
   prim_subreg_ext #(
     .DW    (1)
-  ) u_ctrl2_add (
+  ) u_ctrl2 (
     .re     (1'b0),
-    .we     (ctrl2_add_we),
-    .wd     (ctrl2_add_wd),
-    .d      (hw2reg.ctrl2.add.d),
+    .we     (ctrl2_we),
+    .wd     (ctrl2_wd),
+    .d      (hw2reg.ctrl2.d),
     .qre    (),
-    .qe     (reg2hw.ctrl2.add.qe),
-    .q      (reg2hw.ctrl2.add.q ),
-    .qs     ()
-  );
-
-
-  //   F[mult]: 1:1
-  prim_subreg_ext #(
-    .DW    (1)
-  ) u_ctrl2_mult (
-    .re     (1'b0),
-    .we     (ctrl2_mult_we),
-    .wd     (ctrl2_mult_wd),
-    .d      (hw2reg.ctrl2.mult.d),
-    .qre    (),
-    .qe     (reg2hw.ctrl2.mult.qe),
-    .q      (reg2hw.ctrl2.mult.q ),
+    .qe     (reg2hw.ctrl2.qe),
+    .q      (reg2hw.ctrl2.q ),
     .qs     ()
   );
 
 
   // R[status]: V(True)
 
-  //   F[idle]: 0:0
   prim_subreg_ext #(
     .DW    (1)
-  ) u_status_idle (
-    .re     (status_idle_re),
+  ) u_status (
+    .re     (status_re),
     .we     (1'b0),
     .wd     ('0),
-    .d      (hw2reg.status.idle.d),
+    .d      (hw2reg.status.d),
     .qre    (),
     .qe     (),
     .q      (),
-    .qs     (status_idle_qs)
-  );
-
-
-  //   F[pending]: 1:1
-  prim_subreg_ext #(
-    .DW    (1)
-  ) u_status_pending (
-    .re     (status_pending_re),
-    .we     (1'b0),
-    .wd     ('0),
-    .d      (hw2reg.status.pending.d),
-    .qre    (),
-    .qe     (),
-    .q      (),
-    .qs     (status_pending_qs)
+    .qs     (status_qs)
   );
 
 
@@ -267,15 +231,10 @@ module gf_mult_reg_top #(
   assign ctrl1_we = addr_hit[3] & reg_we & ~wr_err;
   assign ctrl1_wd = reg_wdata[0];
 
-  assign ctrl2_add_we = addr_hit[4] & reg_we & ~wr_err;
-  assign ctrl2_add_wd = reg_wdata[0];
+  assign ctrl2_we = addr_hit[4] & reg_we & ~wr_err;
+  assign ctrl2_wd = reg_wdata[0];
 
-  assign ctrl2_mult_we = addr_hit[4] & reg_we & ~wr_err;
-  assign ctrl2_mult_wd = reg_wdata[1];
-
-  assign status_idle_re = addr_hit[5] && reg_re;
-
-  assign status_pending_re = addr_hit[5] && reg_re;
+  assign status_re = addr_hit[5] && reg_re;
 
   // Read data return
   always_comb begin
@@ -299,12 +258,10 @@ module gf_mult_reg_top #(
 
       addr_hit[4]: begin
         reg_rdata_next[0] = '0;
-        reg_rdata_next[1] = '0;
       end
 
       addr_hit[5]: begin
-        reg_rdata_next[0] = status_idle_qs;
-        reg_rdata_next[1] = status_pending_qs;
+        reg_rdata_next[0] = status_qs;
       end
 
       default: begin

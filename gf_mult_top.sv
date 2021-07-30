@@ -78,10 +78,12 @@ module gf_mult_top
 	gf_mult i_gf_mult (
 			   .clk_i,
 			   .rst_ni,
-			   .trigger_i(reg_file_to_ip.ctrl1.trigger.q & reg_file_to_ip.ctrl1.trigger.qe),
-			   .op_a_i(reg_file_to_ip.op_a),
-			   .op_b_i(reg_file_to_ip.op_b),
-			   .result_o(ip_to_reg_file.result)
+			   .trigger_i(reg_file_to_ip.ctrl1.q & reg_file_to_ip.ctrl1.qe),
+			   .op_a_i(reg_file_to_ip.op_a.q),
+			   .op_b_i(reg_file_to_ip.op_b.q),
+			   .op_select_i(reg_file_to_ip.ctrl2.q),
+			   .result_o(ip_to_reg_file.result.d),
+			   .status_o(ip_to_reg_file.status.d)
 			   );
 endmodul : gf_mult_top
 			

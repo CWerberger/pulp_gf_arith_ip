@@ -23,14 +23,8 @@ package gf_mult_reg_pkg;
   } gf_mult_reg2hw_ctrl1_reg_t;
 
   typedef struct packed {
-    struct packed {
-      logic        q;
-      logic        qe;
-    } add;
-    struct packed {
-      logic        q;
-      logic        qe;
-    } mult;
+    logic        q;
+    logic        qe;
   } gf_mult_reg2hw_ctrl2_reg_t;
 
 
@@ -39,21 +33,11 @@ package gf_mult_reg_pkg;
   } gf_mult_hw2reg_result_reg_t;
 
   typedef struct packed {
-    struct packed {
-      logic        d;
-    } add;
-    struct packed {
-      logic        d;
-    } mult;
+    logic        d;
   } gf_mult_hw2reg_ctrl2_reg_t;
 
   typedef struct packed {
-    struct packed {
-      logic        d;
-    } idle;
-    struct packed {
-      logic        d;
-    } pending;
+    logic        d;
   } gf_mult_hw2reg_status_reg_t;
 
 
@@ -61,18 +45,18 @@ package gf_mult_reg_pkg;
   // Register to internal design logic //
   ///////////////////////////////////////
   typedef struct packed {
-    gf_mult_reg2hw_op_a_reg_t op_a; // [22:15]
-    gf_mult_reg2hw_op_b_reg_t op_b; // [14:7]
-    gf_mult_reg2hw_ctrl1_reg_t ctrl1; // [6:5]
-    gf_mult_reg2hw_ctrl2_reg_t ctrl2; // [4:1]
+    gf_mult_reg2hw_op_a_reg_t op_a; // [20:13]
+    gf_mult_reg2hw_op_b_reg_t op_b; // [12:5]
+    gf_mult_reg2hw_ctrl1_reg_t ctrl1; // [4:3]
+    gf_mult_reg2hw_ctrl2_reg_t ctrl2; // [2:1]
   } gf_mult_reg2hw_t;
 
   ///////////////////////////////////////
   // Internal design logic to register //
   ///////////////////////////////////////
   typedef struct packed {
-    gf_mult_hw2reg_result_reg_t result; // [12:13]
-    gf_mult_hw2reg_ctrl2_reg_t ctrl2; // [12:9]
+    gf_mult_hw2reg_result_reg_t result; // [10:11]
+    gf_mult_hw2reg_ctrl2_reg_t ctrl2; // [10:9]
     gf_mult_hw2reg_status_reg_t status; // [8:9]
   } gf_mult_hw2reg_t;
 
