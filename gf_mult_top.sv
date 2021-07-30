@@ -1,5 +1,5 @@
-'include "register_interface/typedef.svh"
-'include "register_interface/assign.svh"
+`include "register_interface/typedef.svh"
+`include "register_interface/assign.svh"
 
 module gf_mult_top
 	#(
