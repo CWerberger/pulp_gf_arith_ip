@@ -85,7 +85,7 @@ module gf_mult_top
 			   .result_o(ip_to_reg_file.result.d),
 			   .status_o(ip_to_reg_file.status.d)
 			   );
-endmodul : gf_mult_top
+endmodule : gf_mult_top
 			
 			
 			
