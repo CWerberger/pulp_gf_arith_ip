@@ -1,0 +1,1686 @@
+# //  Questa Sim-64
+# //  Version 2019.3_2 linux_x86_64 Sep 24 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project gf_mult
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:53:07 on Jul 27,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): /home/werberger/System_Verilog_Master/TB.sv(14): (vopt-2912) Port 'status_e' not found in module 'gf_mult' (7th connection).
+# ** Warning: /home/werberger/System_Verilog_Master/TB.sv(14): (vopt-2241) Connection width does not match width of port 'status_o'. The port definition is at: /home/werberger/System_Verilog_Master/gf_mult.sv(15).
+# Optimization failed
+# Error loading design
+# End time: 14:53:07 on Jul 27,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:54:41 on Jul 27,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.gf_mult_pkg(fast)
+# Loading work.tb(fast)
+run
+run
+add list sim:/tb/*
+# (vish-4014) No objects found matching '/tb/*'.
+run
+quit -sim
+# End time: 14:57:58 on Jul 27,2021, Elapsed time: 0:03:17
+# Errors: 45, Warnings: 0
+vsim -voptargs=+acc work.tb
+# vsim -voptargs="+acc" work.tb 
+# Start time: 14:58:09 on Jul 27,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/op_a \
+sim:/tb/op_b \
+sim:/tb/reset_ni \
+sim:/tb/result_o \
+sim:/tb/trigger_i
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -continue
+# Break key hit
+run
+# Break key hit
+add wave -position insertpoint  \
+sim:/tb/dut/ALU_WIDTH \
+sim:/tb/dut/clk_i \
+sim:/tb/dut/DEACCEL_COUNTER_WIDTH \
+sim:/tb/dut/i \
+sim:/tb/dut/k \
+sim:/tb/dut/op_a_i \
+sim:/tb/dut/op_b_i \
+sim:/tb/dut/pp_char \
+sim:/tb/dut/result_d \
+sim:/tb/dut/result_m \
+sim:/tb/dut/result_o \
+sim:/tb/dut/rst_ni \
+sim:/tb/dut/state_d \
+sim:/tb/dut/state_q \
+sim:/tb/dut/status_o \
+sim:/tb/dut/temp \
+sim:/tb/dut/trigger_i
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of gf_mult.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+run
+# Compile of gf_mult.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of gf_mult.sv was successful.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of gf_mult.sv was successful.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 3 errors.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/result_m'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/state_q'. 
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 3 errors.
+# 3 compiles, 2 failed with 4 errors.
+# Compile of TB.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 3 errors.
+# 3 compiles, 2 failed with 4 errors.
+# Compile of TB.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/op_a \
+sim:/tb/op_b \
+sim:/tb/reset_ni \
+sim:/tb/result_o \
+sim:/tb/trigger_i
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 3 errors.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 3 errors.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 4 errors.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 4 errors.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+add wave -position insertpoint  \
+sim:/tb/dut/clk_i \
+sim:/tb/dut/DEACCEL_COUNTER_WIDTH \
+sim:/tb/dut/i \
+sim:/tb/dut/IO_WIDTH \
+sim:/tb/dut/k \
+sim:/tb/dut/op_a_i \
+sim:/tb/dut/op_b_i \
+sim:/tb/dut/pp_char \
+sim:/tb/dut/result_d \
+sim:/tb/dut/result_ff \
+sim:/tb/dut/result_o \
+sim:/tb/dut/rst_ni \
+sim:/tb/dut/shift \
+sim:/tb/dut/state_d \
+sim:/tb/dut/state_ff \
+sim:/tb/dut/status_o \
+sim:/tb/dut/temp \
+sim:/tb/dut/temp_ff \
+sim:/tb/dut/trigger_i
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "gf_mult(fast)".
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/shift'. 
+run
+# Compile of TB.sv failed with 2 errors.
+# Compile of gf_arith.vhdl failed with 1 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of gf_mult.sv failed with 9 errors.
+# Compile of gf_mult.sv failed with 7 errors.
+# Compile of gf_mult.sv failed with 7 errors.
+# Compile of gf_mult.sv failed with 5 errors.
+# Compile of gf_mult.sv failed with 5 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+run
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 3 errors.
+# Compile of gf_mult.sv failed with 4 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult.sv was successful.
+# Compile of TB.sv failed with 1 errors.
+# Compile of TB.sv failed with 1 errors.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv failed with 1 errors.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv failed with 1 errors.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/DEACCEL_COUNTER_WIDTH'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/i'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/k'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/temp'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/temp_ff'. 
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/op_a \
+sim:/tb/op_b \
+sim:/tb/reset_ni \
+sim:/tb/result_o \
+sim:/tb/select_i \
+sim:/tb/status \
+sim:/tb/trigger_i
+add wave -position insertpoint  \
+sim:/tb/dut/clk_i \
+sim:/tb/dut/I \
+sim:/tb/dut/IO_WIDTH \
+sim:/tb/dut/J \
+sim:/tb/dut/K \
+sim:/tb/dut/N \
+sim:/tb/dut/op_a_i \
+sim:/tb/dut/op_b_i \
+sim:/tb/dut/op_select_i \
+sim:/tb/dut/P_POL \
+sim:/tb/dut/pp_char \
+sim:/tb/dut/result_d \
+sim:/tb/dut/result_ff \
+sim:/tb/dut/result_o \
+sim:/tb/dut/rst_ni \
+sim:/tb/dut/state_d \
+sim:/tb/dut/state_ff \
+sim:/tb/dut/status_o \
+sim:/tb/dut/trigger_i
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of gf_mult.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/I'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/J'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/K'. 
+run
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/op_a \
+sim:/tb/op_b \
+sim:/tb/reset_ni \
+sim:/tb/result_o \
+sim:/tb/select_i \
+sim:/tb/status \
+sim:/tb/trigger_i
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+add wave -position insertpoint  \
+sim:/tb/dut/clk_i \
+sim:/tb/dut/i \
+sim:/tb/dut/IO_WIDTH \
+sim:/tb/dut/k \
+sim:/tb/dut/N \
+sim:/tb/dut/op_a_i \
+sim:/tb/dut/op_b_i \
+sim:/tb/dut/op_select_i \
+sim:/tb/dut/P_POL \
+sim:/tb/dut/pp_char \
+sim:/tb/dut/result_d \
+sim:/tb/dut/result_ff \
+sim:/tb/dut/result_o \
+sim:/tb/dut/rst_ni \
+sim:/tb/dut/state_d \
+sim:/tb/dut/state_ff \
+sim:/tb/dut/status_o \
+sim:/tb/dut/trigger_i
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/dut/P_POL'. 
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+run
+# Compile of gf_mult.sv was successful.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 2 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+add wave -position insertpoint  \
+sim:/tb/dut/clk_i \
+sim:/tb/dut/i \
+sim:/tb/dut/IO_WIDTH \
+sim:/tb/dut/k \
+sim:/tb/dut/N \
+sim:/tb/dut/op_a_i \
+sim:/tb/dut/op_b_i \
+sim:/tb/dut/op_select_i \
+sim:/tb/dut/pp_char \
+sim:/tb/dut/result_d \
+sim:/tb/dut/result_ff \
+sim:/tb/dut/result_o \
+sim:/tb/dut/rst_ni \
+sim:/tb/dut/state_d \
+sim:/tb/dut/state_ff \
+sim:/tb/dut/status_o \
+sim:/tb/dut/temp \
+sim:/tb/dut/trigger_i
+add wave -position insertpoint  \
+sim:/tb/clk \
+sim:/tb/op_a \
+sim:/tb/op_b \
+sim:/tb/reset_ni \
+sim:/tb/result_o \
+sim:/tb/select_i \
+sim:/tb/status \
+sim:/tb/trigger_i
+add wave -position insertpoint  \
+sim:/tb/dut/clk_i \
+sim:/tb/dut/i \
+sim:/tb/dut/IO_WIDTH \
+sim:/tb/dut/k \
+sim:/tb/dut/N \
+sim:/tb/dut/op_a_i \
+sim:/tb/dut/op_b_i \
+sim:/tb/dut/op_select_i \
+sim:/tb/dut/pp_char \
+sim:/tb/dut/result_d \
+sim:/tb/dut/result_ff \
+sim:/tb/dut/result_o \
+sim:/tb/dut/rst_ni \
+sim:/tb/dut/state_d \
+sim:/tb/dut/state_ff \
+sim:/tb/dut/status_o \
+sim:/tb/dut/temp \
+sim:/tb/dut/trigger_i
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv failed with 1 errors.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of gf_mult.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.gf_mult_pkg(fast)
+# Loading work.gf_mult(fast)
+run
+# Quit canceled
+# Quit canceled
+# Compile of TB.sv was successful.
+# Compile of gf_mult.sv was successful.
+# Compile of gf_mult_pkg.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Quit canceled
+# End time: 12:35:30 on Jul 29,2021, Elapsed time: 45:37:21
+# Errors: 4545, Warnings: 0
