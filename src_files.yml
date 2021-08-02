@@ -10,4 +10,3 @@ gf_mult:
   - gf_mult_top.sv
   vlog_opts:
   - -L register_interface_lib
-	
