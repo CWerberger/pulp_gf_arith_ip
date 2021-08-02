@@ -1,13 +1,13 @@
 gf_mult:
-     incdirs:
-	- ../register_interfaces/include
-	- ../register_interface/vendor/lowrisc_opentitan/include
-     files:
-       - gen_sv/gf_mult_reg_pkg.sv
-       - gen_sv/gf_mult_reg_top.sv
-       - gf_mult_pkg.sv
-       - gf_mult.sv
-       - gf_mult_top.sv
-     vlog_opts:
-      - -L register_interface_lib
+  incdirs:
+  - ../register_interfaces/include
+  - ../register_interface/vendor/lowrisc_opentitan/include
+  files:
+  - gen_sv/gf_mult_reg_pkg.sv
+  - gen_sv/gf_mult_reg_top.sv
+  - gf_mult_pkg.sv
+  - gf_mult.sv
+  - gf_mult_top.sv
+  vlog_opts:
+  - -L register_interface_lib
 	
