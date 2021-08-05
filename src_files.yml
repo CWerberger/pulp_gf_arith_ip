@@ -9,4 +9,8 @@ gf_mult:
   - gf_mult.sv
   - gf_mult_top.sv
   vlog_opts:
+<<<<<<< HEAD
   - -L register_interface_lib
+=======
+  - -L register_interface_lib
+>>>>>>> b3286d46aac95fc507799e1bd5c2a79fd84ea7df
