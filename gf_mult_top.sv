@@ -5,8 +5,8 @@ module gf_mult_top
 	#(
 	   parameter int unsigned AXI_ADDR_WIDTH = 32,
 	   localparam int unsigned AXI_DATA_WIDTH = 32,
-	   parameter int unsigned AXI_ID_WIDTH = -1,
-	   parameter int unsigned AXI_USER_WIDTH = -1
+	   parameter int unsigned AXI_ID_WIDTH,
+	   parameter int unsigned AXI_USER_WIDTH
 	  )
 	(
 	input logic clk_i,
@@ -18,10 +18,10 @@ module gf_mult_top
 	
 	import gf_mult_reg_pkg::gf_mult_reg2hw_t;
 	import gf_mult_reg_pkg::gf_mult_hw2reg_t;
-	import wide_alu_pkg::status_e;
+	import gf_mult_pkg::status_e;
 	
 	//Wiring Signals
-	REG_BUS #(.ADDR_WIDTH(32), .DATA_WIIDTH(32)) axi_to_regfile();  // Generic Reg-Interface Bus
+	REG_BUS #(.ADDR_WIDTH(32), .DATA_WIDTH(32)) axi_to_reg_file();  // Generic Reg-Interface Bus
 	gf_mult_reg2hw_t reg_file_to_ip;
 	gf_mult_hw2reg_t ip_to_reg_file;
 	

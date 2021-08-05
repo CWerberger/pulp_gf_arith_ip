@@ -170,7 +170,7 @@ module gf_mult_reg_top #(
     .re     (1'b0),
     .we     (ctrl2_we),
     .wd     (ctrl2_wd),
-    .d      (hw2reg.ctrl2.d),
+    .d      ('0),
     .qre    (),
     .qe     (reg2hw.ctrl2.qe),
     .q      (reg2hw.ctrl2.q ),

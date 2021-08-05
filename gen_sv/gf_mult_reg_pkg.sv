@@ -34,10 +34,6 @@ package gf_mult_reg_pkg;
 
   typedef struct packed {
     logic        d;
-  } gf_mult_hw2reg_ctrl2_reg_t;
-
-  typedef struct packed {
-    logic        d;
   } gf_mult_hw2reg_status_reg_t;
 
 
@@ -55,9 +51,8 @@ package gf_mult_reg_pkg;
   // Internal design logic to register //
   ///////////////////////////////////////
   typedef struct packed {
-    gf_mult_hw2reg_result_reg_t result; // [10:11]
-    gf_mult_hw2reg_ctrl2_reg_t ctrl2; // [10:9]
-    gf_mult_hw2reg_status_reg_t status; // [8:9]
+    gf_mult_hw2reg_result_reg_t result; // [9:10]
+    gf_mult_hw2reg_status_reg_t status; // [9:10]
   } gf_mult_hw2reg_t;
 
   // Register Address
