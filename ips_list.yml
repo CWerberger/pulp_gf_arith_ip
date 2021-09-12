@@ -1,6 +1,6 @@
 axi:
-  commit: v0.29.1
+  commit: v0.21.1
   domain: [cluster, soc]
 register_interface:
-  commit: v0.2.2
+  commit: b1bc9c22e0c2a5801107070c022904498dbae34b
   domain: [soc]
