@@ -2,5 +2,9 @@ axi:
   commit: v0.29.1
   domain: [cluster, soc]
 register_interface:
+<<<<<<< HEAD
   commit: v0.3.1
+=======
+  commit: v0.2.2
+>>>>>>> parent of a47efd9 (Update ips_list.yml)
   domain: [soc]
