@@ -6,9 +6,13 @@
 
 package gf_mult_reg_pkg;
 
+  // Address widths within the block
+  parameter int BlockAw = 5;
+
   ////////////////////////////
   // Typedefs for registers //
   ////////////////////////////
+
   typedef struct packed {
     logic [7:0]  q;
   } gf_mult_reg2hw_op_a_reg_t;
@@ -27,44 +31,48 @@ package gf_mult_reg_pkg;
     logic        qe;
   } gf_mult_reg2hw_ctrl2_reg_t;
 
-
   typedef struct packed {
     logic [7:0]  d;
   } gf_mult_hw2reg_result_reg_t;
 
   typedef struct packed {
     logic        d;
+  } gf_mult_hw2reg_ctrl2_reg_t;
+
+  typedef struct packed {
+    logic        d;
   } gf_mult_hw2reg_status_reg_t;
 
-
-  ///////////////////////////////////////
-  // Register to internal design logic //
-  ///////////////////////////////////////
+  // Register -> HW type
   typedef struct packed {
-    gf_mult_reg2hw_op_a_reg_t op_a; // [20:13]
-    gf_mult_reg2hw_op_b_reg_t op_b; // [12:5]
-    gf_mult_reg2hw_ctrl1_reg_t ctrl1; // [4:3]
-    gf_mult_reg2hw_ctrl2_reg_t ctrl2; // [2:1]
+    gf_mult_reg2hw_op_a_reg_t op_a; // [19:12]
+    gf_mult_reg2hw_op_b_reg_t op_b; // [11:4]
+    gf_mult_reg2hw_ctrl1_reg_t ctrl1; // [3:2]
+    gf_mult_reg2hw_ctrl2_reg_t ctrl2; // [1:0]
   } gf_mult_reg2hw_t;
 
-  ///////////////////////////////////////
-  // Internal design logic to register //
-  ///////////////////////////////////////
+  // HW -> register type
   typedef struct packed {
-    gf_mult_hw2reg_result_reg_t result; // [9:10]
-    gf_mult_hw2reg_status_reg_t status; // [9:10]
+    gf_mult_hw2reg_result_reg_t result; // [9:2]
+    gf_mult_hw2reg_ctrl2_reg_t ctrl2; // [1:1]
+    gf_mult_hw2reg_status_reg_t status; // [0:0]
   } gf_mult_hw2reg_t;
 
-  // Register Address
-  parameter logic [4:0] GF_MULT_OP_A_OFFSET = 5'h 0;
-  parameter logic [4:0] GF_MULT_OP_B_OFFSET = 5'h 4;
-  parameter logic [4:0] GF_MULT_RESULT_OFFSET = 5'h 8;
-  parameter logic [4:0] GF_MULT_CTRL1_OFFSET = 5'h c;
-  parameter logic [4:0] GF_MULT_CTRL2_OFFSET = 5'h 10;
-  parameter logic [4:0] GF_MULT_STATUS_OFFSET = 5'h 14;
+  // Register offsets
+  parameter logic [BlockAw-1:0] GF_MULT_OP_A_OFFSET = 5'h 0;
+  parameter logic [BlockAw-1:0] GF_MULT_OP_B_OFFSET = 5'h 4;
+  parameter logic [BlockAw-1:0] GF_MULT_RESULT_OFFSET = 5'h 8;
+  parameter logic [BlockAw-1:0] GF_MULT_CTRL1_OFFSET = 5'h c;
+  parameter logic [BlockAw-1:0] GF_MULT_CTRL2_OFFSET = 5'h 10;
+  parameter logic [BlockAw-1:0] GF_MULT_STATUS_OFFSET = 5'h 14;
 
+  // Reset values for hwext registers and their fields
+  parameter logic [7:0] GF_MULT_RESULT_RESVAL = 8'h 0;
+  parameter logic [0:0] GF_MULT_CTRL1_RESVAL = 1'h 0;
+  parameter logic [0:0] GF_MULT_CTRL2_RESVAL = 1'h 0;
+  parameter logic [0:0] GF_MULT_STATUS_RESVAL = 1'h 0;
 
-  // Register Index
+  // Register index
   typedef enum int {
     GF_MULT_OP_A,
     GF_MULT_OP_B,
@@ -83,5 +91,6 @@ package gf_mult_reg_pkg;
     4'b 0001, // index[4] GF_MULT_CTRL2
     4'b 0001  // index[5] GF_MULT_STATUS
   };
+
 endpackage
 
