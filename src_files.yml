@@ -2,6 +2,7 @@ gf_mult:
   incdirs:
   - ../register_interface/include
   - ../register_interface/vendor/lowrisc_opentitan
+  - ../common_cells/include
   files:
   - gen_sv/gf_mult_reg_pkg.sv
   - gen_sv/gf_mult_reg_top.sv
