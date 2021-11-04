@@ -82,6 +82,7 @@ module gf_mult_top
 			   .trigger_i(reg_file_to_ip.ctrl1.q & reg_file_to_ip.ctrl1.qe),
 			   .op_a_i(reg_file_to_ip.op_a.q),
 			   .op_b_i(reg_file_to_ip.op_b.q),
+			   .op_c_i(reg_file_to_ip.op_c.q),
 			   .op_select_i(reg_file_to_ip.ctrl2.q),
 			   .result_o(ip_to_reg_file.result.d),
 			   .status_o(ip_to_reg_file.status.d)

@@ -72,11 +72,13 @@ module gf_mult_reg_top #(
   logic op_a_we;
   logic [7:0] op_b_wd;
   logic op_b_we;
+  logic [7:0] op_c_wd;
+  logic op_c_we;
   logic [7:0] result_qs;
   logic result_re;
   logic ctrl1_wd;
   logic ctrl1_we;
-  logic ctrl2_wd;
+  logic [1:0] ctrl2_wd;
   logic ctrl2_we;
   logic status_qs;
   logic status_re;
@@ -134,6 +136,32 @@ module gf_mult_reg_top #(
   );
 
 
+  // R[op_c]: V(False)
+
+  prim_subreg #(
+    .DW      (8),
+    .SWACCESS("WO"),
+    .RESVAL  (8'h0)
+  ) u_op_c (
+    .clk_i   (clk_i    ),
+    .rst_ni  (rst_ni  ),
+
+    // from register interface
+    .we     (op_c_we),
+    .wd     (op_c_wd),
+
+    // from internal hardware
+    .de     (1'b0),
+    .d      ('0  ),
+
+    // to internal hardware
+    .qe     (),
+    .q      (reg2hw.op_c.q ),
+
+    .qs     ()
+  );
+
+
   // R[result]: V(True)
 
   prim_subreg_ext #(
@@ -169,7 +197,7 @@ module gf_mult_reg_top #(
   // R[ctrl2]: V(True)
 
   prim_subreg_ext #(
-    .DW    (1)
+    .DW    (2)
   ) u_ctrl2 (
     .re     (1'b0),
     .we     (ctrl2_we),
@@ -200,15 +228,16 @@ module gf_mult_reg_top #(
 
 
 
-  logic [5:0] addr_hit;
+  logic [6:0] addr_hit;
   always_comb begin
     addr_hit = '0;
     addr_hit[0] = (reg_addr == GF_MULT_OP_A_OFFSET);
     addr_hit[1] = (reg_addr == GF_MULT_OP_B_OFFSET);
-    addr_hit[2] = (reg_addr == GF_MULT_RESULT_OFFSET);
-    addr_hit[3] = (reg_addr == GF_MULT_CTRL1_OFFSET);
-    addr_hit[4] = (reg_addr == GF_MULT_CTRL2_OFFSET);
-    addr_hit[5] = (reg_addr == GF_MULT_STATUS_OFFSET);
+    addr_hit[2] = (reg_addr == GF_MULT_OP_C_OFFSET);
+    addr_hit[3] = (reg_addr == GF_MULT_RESULT_OFFSET);
+    addr_hit[4] = (reg_addr == GF_MULT_CTRL1_OFFSET);
+    addr_hit[5] = (reg_addr == GF_MULT_CTRL2_OFFSET);
+    addr_hit[6] = (reg_addr == GF_MULT_STATUS_OFFSET);
   end
 
   assign addrmiss = (reg_re || reg_we) ? ~|addr_hit : 1'b0 ;
@@ -221,7 +250,8 @@ module gf_mult_reg_top #(
                (addr_hit[2] & (|(GF_MULT_PERMIT[2] & ~reg_be))) |
                (addr_hit[3] & (|(GF_MULT_PERMIT[3] & ~reg_be))) |
                (addr_hit[4] & (|(GF_MULT_PERMIT[4] & ~reg_be))) |
-               (addr_hit[5] & (|(GF_MULT_PERMIT[5] & ~reg_be)))));
+               (addr_hit[5] & (|(GF_MULT_PERMIT[5] & ~reg_be))) |
+               (addr_hit[6] & (|(GF_MULT_PERMIT[6] & ~reg_be)))));
   end
 
   assign op_a_we = addr_hit[0] & reg_we & !reg_error;
@@ -230,15 +260,18 @@ module gf_mult_reg_top #(
   assign op_b_we = addr_hit[1] & reg_we & !reg_error;
   assign op_b_wd = reg_wdata[7:0];
 
-  assign result_re = addr_hit[2] & reg_re & !reg_error;
+  assign op_c_we = addr_hit[2] & reg_we & !reg_error;
+  assign op_c_wd = reg_wdata[7:0];
 
-  assign ctrl1_we = addr_hit[3] & reg_we & !reg_error;
+  assign result_re = addr_hit[3] & reg_re & !reg_error;
+
+  assign ctrl1_we = addr_hit[4] & reg_we & !reg_error;
   assign ctrl1_wd = reg_wdata[0];
 
-  assign ctrl2_we = addr_hit[4] & reg_we & !reg_error;
-  assign ctrl2_wd = reg_wdata[0];
+  assign ctrl2_we = addr_hit[5] & reg_we & !reg_error;
+  assign ctrl2_wd = reg_wdata[1:0];
 
-  assign status_re = addr_hit[5] & reg_re & !reg_error;
+  assign status_re = addr_hit[6] & reg_re & !reg_error;
 
   // Read data return
   always_comb begin
@@ -253,11 +286,11 @@ module gf_mult_reg_top #(
       end
 
       addr_hit[2]: begin
-        reg_rdata_next[7:0] = result_qs;
+        reg_rdata_next[7:0] = '0;
       end
 
       addr_hit[3]: begin
-        reg_rdata_next[0] = '0;
+        reg_rdata_next[7:0] = result_qs;
       end
 
       addr_hit[4]: begin
@@ -265,6 +298,10 @@ module gf_mult_reg_top #(
       end
 
       addr_hit[5]: begin
+        reg_rdata_next[1:0] = '0;
+      end
+
+      addr_hit[6]: begin
         reg_rdata_next[0] = status_qs;
       end
 

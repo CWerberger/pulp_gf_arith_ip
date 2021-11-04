@@ -29,6 +29,17 @@
             ],
 
         },
+         { 
+            name: "OP_C",
+            desc: "Subword of Operand B , used for MAC Addition term.",
+            cname: "OP_B",
+            swaccess: "wo",
+            fields: [
+                { bits: "7:0"
+                }
+            ],
+
+        },
         { 
             name: "RESULT",
             desc: "results",
@@ -57,11 +68,12 @@
           desc: "Controls trigger signal of the gf arithmetic.",
           swaccess: "wo",
           fields: [ 
-              { bits: "0:0", name: "Op_Sel",
+              { bits: "1:0", name: "Op_Sel",
          	desc: " Select the operation.",
          	enum: [
               		{ value: "0", name: "ADD", desc: "Perf ADD operation." },
               		{ value: "1", name: "MUL", desc: "Perf MUL operation." },
+                    { value: "2", name: "MAC", desc: "Perf MAC operation." },
             	]
               }
           ]

@@ -38,6 +38,16 @@
 
         },
         { 
+            name: "OP_C",
+            desc: "Operand for MAC Operation (Addition term)",
+            swaccess: "wo",
+            fields: [
+                { bits: "7:0", name: "op_b", desc: "input parameter c"
+                }
+            ],
+
+        },
+        { 
             name: "RESULT",
             desc: "results",
             swaccess: "ro",
@@ -67,10 +77,11 @@
           hwext: "true",
           hwqe : "true",
           fields: [ 
-              { bits: "0:0", name: "Op_Sel", desc: " Select the operation.",
+              { bits: "1:0", name: "Op_Sel", desc: " Select the operation.",
          	enum: [
               		{ value: "0", name: "ADD", desc: "Perf ADD operation." },
               		{ value: "1", name: "MUL", desc: "Perf MUL operation." },
+                    { value: "2", name: "MAC", desc: "Perf MAC operation." },
             	]
               }
           ]
