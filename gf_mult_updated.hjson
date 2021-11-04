@@ -14,7 +14,7 @@
              direction: "device"
          }
       ],
-    
+
     regwidth: "32",
     registers: [
         {

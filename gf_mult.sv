@@ -43,9 +43,9 @@ module gf_mult
                     state_d	<= gf_mult_pkg::PENDING;
 		    result_d	<= '0;
 			         
-        	end else begin
+                end else begin
                     state_d   <= gf_mult_pkg::IDLE;
-		end
+                end
             end
 
            gf_mult_pkg::PENDING: begin
