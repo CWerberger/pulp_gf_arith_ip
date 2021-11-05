@@ -11,7 +11,7 @@ module gf_mult
      input logic [IO_WIDTH-1:0]               op_a_i,
      input logic [IO_WIDTH-1:0]               op_b_i,
      input logic [IO_WIDTH-1:0]               op_c_i,
-     input logic [1:0]			      op_select_i,
+     input logic [1:0]			              op_select_i,
      output logic [IO_WIDTH-1:0]              result_o,
      output 				      status_e status_o		// check if the IP is working 
      );

@@ -194,18 +194,28 @@ module gf_mult_reg_top #(
   );
 
 
-  // R[ctrl2]: V(True)
+  // R[ctrl2]: V(False)
 
-  prim_subreg_ext #(
-    .DW    (2)
+  prim_subreg #(
+    .DW      (2),
+    .SWACCESS("WO"),
+    .RESVAL  (2'h0)
   ) u_ctrl2 (
-    .re     (1'b0),
+    .clk_i   (clk_i    ),
+    .rst_ni  (rst_ni  ),
+
+    // from register interface
     .we     (ctrl2_we),
     .wd     (ctrl2_wd),
-    .d      (hw2reg.ctrl2.d),
-    .qre    (),
-    .qe     (reg2hw.ctrl2.qe),
+
+    // from internal hardware
+    .de     (1'b0),
+    .d      ('0  ),
+
+    // to internal hardware
+    .qe     (),
     .q      (reg2hw.ctrl2.q ),
+
     .qs     ()
   );
 

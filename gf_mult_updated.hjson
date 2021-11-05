@@ -73,16 +73,8 @@
         { name: "CTRL2",
           desc: "Controls trigger signal of the gf arithmetic.",
           swaccess: "wo",
-          hwaccess: "hrw",
-          hwext: "true",
-          hwqe : "true",
           fields: [ 
-              { bits: "1:0", name: "Op_Sel", desc: " Select the operation.",
-         	enum: [
-              		{ value: "0", name: "ADD", desc: "Perf ADD operation." },
-              		{ value: "1", name: "MUL", desc: "Perf MUL operation." },
-                    { value: "2", name: "MAC", desc: "Perf MAC operation." },
-            	]
+              { bits: "1:0", name: "Op_Sel", desc: " Select the operation."
               }
           ]
         },

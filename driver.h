@@ -1,3 +1,5 @@
+// Generated register defines for gf_mult
+
 // Copyright information found in source file:
 // Copyright lowRISC contributors.
 
@@ -58,9 +60,6 @@ extern "C" {
 #define GF_MULT_CTRL2_OP_SEL_OFFSET 0
 #define GF_MULT_CTRL2_OP_SEL_FIELD \
   ((bitfield_field32_t) { .mask = GF_MULT_CTRL2_OP_SEL_MASK, .index = GF_MULT_CTRL2_OP_SEL_OFFSET })
-#define GF_MULT_CTRL2_OP_SEL_VALUE_ADD 0x0
-#define GF_MULT_CTRL2_OP_SEL_VALUE_MUL 0x1
-#define GF_MULT_CTRL2_OP_SEL_VALUE_MAC 0x2
 
 // Contains the current status of the accelerator.
 #define GF_MULT_STATUS(id) (GF_MULT ## id ## _BASE_ADDR + 0x18)

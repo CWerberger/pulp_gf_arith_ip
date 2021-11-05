@@ -32,7 +32,6 @@ package gf_mult_reg_pkg;
 
   typedef struct packed {
     logic [1:0]  q;
-    logic        qe;
   } gf_mult_reg2hw_ctrl2_reg_t;
 
   typedef struct packed {
@@ -40,26 +39,21 @@ package gf_mult_reg_pkg;
   } gf_mult_hw2reg_result_reg_t;
 
   typedef struct packed {
-    logic [1:0]  d;
-  } gf_mult_hw2reg_ctrl2_reg_t;
-
-  typedef struct packed {
     logic        d;
   } gf_mult_hw2reg_status_reg_t;
 
   // Register -> HW type
   typedef struct packed {
-    gf_mult_reg2hw_op_a_reg_t op_a; // [28:21]
-    gf_mult_reg2hw_op_b_reg_t op_b; // [20:13]
-    gf_mult_reg2hw_op_c_reg_t op_c; // [12:5]
-    gf_mult_reg2hw_ctrl1_reg_t ctrl1; // [4:3]
-    gf_mult_reg2hw_ctrl2_reg_t ctrl2; // [2:0]
+    gf_mult_reg2hw_op_a_reg_t op_a; // [27:20]
+    gf_mult_reg2hw_op_b_reg_t op_b; // [19:12]
+    gf_mult_reg2hw_op_c_reg_t op_c; // [11:4]
+    gf_mult_reg2hw_ctrl1_reg_t ctrl1; // [3:2]
+    gf_mult_reg2hw_ctrl2_reg_t ctrl2; // [1:0]
   } gf_mult_reg2hw_t;
 
   // HW -> register type
   typedef struct packed {
-    gf_mult_hw2reg_result_reg_t result; // [10:3]
-    gf_mult_hw2reg_ctrl2_reg_t ctrl2; // [2:1]
+    gf_mult_hw2reg_result_reg_t result; // [8:1]
     gf_mult_hw2reg_status_reg_t status; // [0:0]
   } gf_mult_hw2reg_t;
 
@@ -75,7 +69,6 @@ package gf_mult_reg_pkg;
   // Reset values for hwext registers and their fields
   parameter logic [7:0] GF_MULT_RESULT_RESVAL = 8'h 0;
   parameter logic [0:0] GF_MULT_CTRL1_RESVAL = 1'h 0;
-  parameter logic [1:0] GF_MULT_CTRL2_RESVAL = 2'h 0;
   parameter logic [0:0] GF_MULT_STATUS_RESVAL = 1'h 0;
 
   // Register index
